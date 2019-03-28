@@ -7,12 +7,13 @@ namespace MyGame
     {
         public Sputnik(Point pos, Point dir, Size size) : base(pos, dir, size){}
 
+        Image sputnik = Image.FromFile(@"Images\sputnik.png");
+
         /// <summary>
-        /// Переопределение базового метода. Вывод через буфер картинок спутника на устройство вывода графики
+        /// Реализация метода базового класса. Вывод через буфер картинок спутника на устройство вывода графики
         /// </summary>
         public override void Draw()
-        {
-            Image sputnik = Image.FromFile("sputnik.png");
+        {            
             Game.Buffer.Graphics.DrawImage(sputnik, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
 
@@ -21,7 +22,7 @@ namespace MyGame
         /// </summary>
         public override void Update()
         {
-            Pos.X = Pos.X - Dir.X;
+            Pos.X = Pos.X + Dir.X;
             if (Pos.X < 0) Pos.X = Game.Width;
         }
     }

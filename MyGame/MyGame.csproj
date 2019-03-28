@@ -46,7 +46,10 @@
   <ItemGroup>
     <Compile Include="Asteroid.cs" />
     <Compile Include="BaseObject.cs" />
+    <Compile Include="Bullet.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameBulletException.cs" />
+    <Compile Include="ICollision.cs" />
     <Compile Include="NyanCat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,9 +65,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\asteroid.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,9 +74,12 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\nyanCat.png" />
-    <Content Include="bin\Debug\sputnik.png" />
-    <Content Include="bin\Debug\star.png" />
+    <Content Include="bin\Debug\Images\asteroid.png" />
+    <Content Include="bin\Debug\Images\bullet.png" />
+    <Content Include="bin\Debug\Images\nyanCat.png" />
+    <Content Include="bin\Debug\Images\sputnik.png" />
+    <Content Include="bin\Debug\Images\star.png" />
+    <Content Include="bin\Debug\Sounds\gun.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

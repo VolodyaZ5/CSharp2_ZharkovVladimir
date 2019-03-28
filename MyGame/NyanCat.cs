@@ -7,12 +7,13 @@ namespace MyGame
     {
         public NyanCat(Point pos, Point dir, Size size) : base(pos, dir, size){}
 
+        Image nyanCat = Image.FromFile(@"Images\nyanCat.png");
+
         /// <summary>
-        /// Переопределение базового метода. Вывод через буфер картинок nyanCat на устройство вывода графики
+        /// Реализация метода базового класса. Вывод через буфер картинок nyanCat на устройство вывода графики
         /// </summary>
         public override void Draw()
-        {
-            Image nyanCat = Image.FromFile("nyanCat.png");
+        {            
             Game.Buffer.Graphics.DrawImage(nyanCat, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
 
@@ -22,7 +23,7 @@ namespace MyGame
         public override void Update()
         {
             Pos.X = Pos.X + Dir.X;
-            if (Pos.X > Game.Width) Pos.X = 0;
+            if (Pos.X < 0) Pos.X = Game.Width;
         }
     }
 }

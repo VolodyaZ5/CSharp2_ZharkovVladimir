@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System.Collections.Generic;
+using System.Media;
 
 namespace MyGame
 {   
@@ -11,14 +12,25 @@ namespace MyGame
         public static int Width { get; set; }
         public static int Height { get; set; }
 
-        //Массив объектов фона
-        //public static BaseObject[] _objs;
+        //Массив объектов фона        
         static List<BaseObject> objectInSpace = new List<BaseObject>();
+
+        static Random rnd = new Random();
+
+        //Объект класса пули
+        static Bullet bullet;
+
+        //Звук выстрела
+        static SoundPlayer sp;
 
         private static BufferedGraphicsContext _context;
         public static BufferedGraphics Buffer;
 
-        static Game() { }
+        static Game()
+        {
+            bullet = new Bullet(new Point(0, rnd.Next(0, Game.Height)), new Point(5, 0), new Size(101, 65));
+            sp = new SoundPlayer(@"Sounds\gun.wav");
+        }
         public static void Init(Form form)
         {
             //Устройство для вывода графики
@@ -31,9 +43,10 @@ namespace MyGame
             //Создаем объект и связываем его с формой
             g = form.CreateGraphics();
 
-            //Запоминаем размеры формы
+            //Запоминаем размеры формы            
             Width = form.ClientSize.Width;
             Height = form.ClientSize.Height;
+            
 
 
             //Связываем буфер в памяти с графическим объектом, чтобы рисовать в памяти
@@ -46,7 +59,7 @@ namespace MyGame
             timer.Tick += (s, e) => { Draw(); Update(); };
         }
 
-        
+
         /// <summary>
         /// Вывод через буфер на устройство вывода графики
         /// </summary>
@@ -54,9 +67,11 @@ namespace MyGame
         {
             Buffer.Graphics.Clear(Color.Black);
             foreach (BaseObject obj in objectInSpace)
-                obj.Draw();            
-            Buffer.Render();            
+                obj.Draw();
+            bullet.Draw();
+            Buffer.Render();
         }
+
 
         /// <summary>
         /// Обновление позиции на экране для каждого из элементов массива объектов фона
@@ -65,24 +80,32 @@ namespace MyGame
         {
             foreach (BaseObject obj in objectInSpace)
             {
+                if (obj.Collision(bullet))
+                {
+                    //SystemSounds.Exclamation.Play();                    
+                    sp.Play();
+                }
                 obj.Update();
-            }            
+            }
+            bullet.Update();
         }
+        
 
         /// <summary>
         /// Создает объекты фона
         /// </summary>
         public static void Load()
-        {
-            Random r = new Random();
+        {            
             for (int i = 0; i < 15; i++)
             {
-                switch (r.Next(0, 4))
+                int r = rnd.Next(5, 50);
+
+                switch (rnd.Next(0, 4))
                 {
-                    case 0: objectInSpace.Add(new Asteroid(new Point(0, i * 40), new Point(2 * i, i), new Size(20, 20))); break;
-                    case 1: objectInSpace.Add(new Star(new Point(600, i * 40), new Point(i, 0), new Size(20, 20))); break;
-                    case 2: objectInSpace.Add(new Sputnik(new Point(300, i * 40), new Point(i, 0), new Size(30, 25))); break;
-                    case 3: objectInSpace.Add(new NyanCat(new Point(700, i * 40), new Point(i, 15 + i), new Size(60, 25))); break;
+                    case 0: objectInSpace.Add(new Asteroid(new Point(800, rnd.Next(0, Game.Height)), new Point(-r, r), new Size(20, 20))); break;
+                    case 1: objectInSpace.Add(new Star(new Point(600, rnd.Next(0, Game.Height)), new Point(-r / 5, r), new Size(20, 20))); break;
+                    case 2: objectInSpace.Add(new Sputnik(new Point(300, rnd.Next(0, Game.Height)), new Point(-r / 2, r), new Size(30, 25))); break;
+                    case 3: objectInSpace.Add(new NyanCat(new Point(700, rnd.Next(0, Game.Height)), new Point(-r / 3, r), new Size(60, 25))); break;
                 }
             }            
         }        
