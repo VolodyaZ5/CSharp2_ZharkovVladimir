@@ -34,3 +34,12 @@ D:\!_Programming on the C#\GeekBrains\Методичка\Chapter2\2_2\По ме�
 D:\!_Programming on the C#\GeekBrains\Методичка\Chapter2\2_2\По методичке\MyGame\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
 D:\!_Programming on the C#\GeekBrains\Методичка\Chapter2\2_2\По методичке\MyGame\MyGame\obj\Debug\MyGame.exe
 D:\!_Programming on the C#\GeekBrains\Методичка\Chapter2\2_2\По методичке\MyGame\MyGame\obj\Debug\MyGame.pdb
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\bin\Debug\MyGame.exe.config
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\bin\Debug\MyGame.exe
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\bin\Debug\MyGame.pdb
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\obj\Debug\MyGame.csprojResolveAssemblyReference.cache
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\obj\Debug\MyGame.Properties.Resources.resources
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\obj\Debug\MyGame.csproj.GenerateResource.cache
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\obj\Debug\MyGame.exe
+D:\!_Programming on the C#\Git\Repos\CSharp2_ZharkovVladimir\MyGame\obj\Debug\MyGame.pdb
