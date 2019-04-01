@@ -9,6 +9,11 @@ namespace MyGame
         protected Point Dir; //Направление
         protected Size Size; //Размер
 
+        /// <summary>
+        /// Делегат для использования событий
+        /// </summary>
+        public delegate void Message();
+
         protected BaseObject(Point pos, Point dir, Size size)
         {
             Pos = pos;
@@ -32,5 +37,10 @@ namespace MyGame
         /// Обновление позиции на экране
         /// </summary>
         public abstract void Update();
+
+        public void PrintLog()
+        {
+            Console.WriteLine($"Сбит объект!");
+        }
     }
 }

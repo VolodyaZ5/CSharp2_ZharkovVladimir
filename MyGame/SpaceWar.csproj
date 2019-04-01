@@ -47,6 +47,7 @@
     <Compile Include="Asteroid.cs" />
     <Compile Include="BaseObject.cs" />
     <Compile Include="Bullet.cs" />
+    <Compile Include="FirstAidKit.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameBulletException.cs" />
     <Compile Include="ICollision.cs" />
@@ -58,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Ship.cs" />
     <Compile Include="Sputnik.cs" />
     <Compile Include="Star.cs" />
   </ItemGroup>
@@ -76,7 +78,9 @@
   <ItemGroup>
     <Content Include="bin\Debug\Images\asteroid.png" />
     <Content Include="bin\Debug\Images\bullet.png" />
+    <Content Include="bin\Debug\Images\firstAidKit.png" />
     <Content Include="bin\Debug\Images\nyanCat.png" />
+    <Content Include="bin\Debug\Images\ship.png" />
     <Content Include="bin\Debug\Images\sputnik.png" />
     <Content Include="bin\Debug\Images\star.png" />
     <Content Include="bin\Debug\Sounds\gun.wav" />

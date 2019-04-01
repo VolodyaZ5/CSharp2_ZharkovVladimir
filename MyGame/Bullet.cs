@@ -40,14 +40,8 @@ namespace MyGame
         }
 
         public override void Update()
-        {
-            Random rnd = new Random();
+        {            
             Pos.X += 25;
-            if (Pos.X > Game.Width)
-            {
-                Pos.X = 0;
-                Pos.Y = rnd.Next(0, Game.Height);
-            }
-        }
+        }        
     }
 }

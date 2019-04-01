@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace MyGame
 {
-    class Asteroid : BaseObject
+    class Asteroid : BaseObject, ICloneable, IComparable<Asteroid>
     {
-        public int Power { get; set; }
+        public int Power { get; set; } = 3;
         public Asteroid(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
             Power = 1;
@@ -28,6 +28,38 @@ namespace MyGame
         {
             Pos.X = Pos.X + Dir.X;
             if (Pos.X < 0) Pos.X = Game.Width;            
+        }
+
+        /// <summary>
+        /// Копирование объекта астероида
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            Asteroid asteroid = new Asteroid(new Point(Pos.X, Pos.Y),
+                new Point(Dir.X, Dir.Y), new Size(Size.Width, Size.Height))
+            {
+                Power = Power
+            };
+            return asteroid;
+        }
+
+        /// <summary>
+        /// Сравнение астероидов
+        /// </summary>
+        /// <param name="obj">Сравниваемый объект астероида</param>
+        /// <returns></returns>
+        int IComparable<Asteroid>.CompareTo(Asteroid obj)
+        {
+            if (Power > obj.Power)
+            {
+                return 1;
+            }
+            if (Power < obj.Power)
+            {
+                return -1;
+            }
+            return 0;
         }
     }
 }
