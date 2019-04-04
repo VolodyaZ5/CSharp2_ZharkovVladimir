@@ -1,0 +1,7 @@
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\bin\Debug\AppealToOrderBy.exe.config
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\bin\Debug\AppealToOrderBy.exe
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\bin\Debug\AppealToOrderBy.pdb
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\obj\Debug\AppealToOrderBy.csproj.CoreCompileInputs.cache
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\obj\Debug\AppealToOrderBy.exe
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\obj\Debug\AppealToOrderBy.pdb
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\AppealToOrderBy\obj\Debug\AppealToOrderBy.csprojAssemblyReference.cache

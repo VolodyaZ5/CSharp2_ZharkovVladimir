@@ -1,0 +1,7 @@
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\bin\Debug\CountOfElementInList.exe.config
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\bin\Debug\CountOfElementInList.exe
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\bin\Debug\CountOfElementInList.pdb
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\obj\Debug\CountOfElementInList.csprojAssemblyReference.cache
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\obj\Debug\CountOfElementInList.csproj.CoreCompileInputs.cache
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\obj\Debug\CountOfElementInList.exe
+\\mail2016\компьютер owl\Root\!!_ВЛАДиМИР\Books\GeekBrains\MyGame\CountOfElementInList\obj\Debug\CountOfElementInList.pdb
