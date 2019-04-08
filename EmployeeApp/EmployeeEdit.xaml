@@ -1,0 +1,26 @@
+﻿<Window x:Class="EmployeeApp.EmployeeEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeApp"
+        mc:Ignorable="d"
+        Title="Редактирование информации о сотруднике" Height="400" Width="380">
+    <Grid Margin="10">
+        <StackPanel>
+            <Label x:Name="lblSurnameEdit" Content="Фамилия:" FontSize="18"/>
+            <TextBox x:Name="txtSurnameEdit" Height="25"/>
+
+            <Label x:Name="lblFirstNameEdit" Content="Имя:" FontSize="18"/>
+            <TextBox x:Name="txtFirstNameEdit" Height="25"/>
+
+            <Label x:Name="lblLastNameEdit" Content="Отчество:" FontSize="18"/>
+            <TextBox x:Name="txtLastNameEdit" Height="25"/>
+
+            <Label x:Name="lblDeptEdit" Content="Отдел:" FontSize="18"/>
+            <ComboBox x:Name="cmbDeptEdit" Height="25"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
